@@ -8,8 +8,7 @@ public class Main {
     }
 
     public static void main(String[] ags) {
-        PassArguments methodOfPass = new Main.PassArguments();
-        methodOfPass();
+        // PassArguments methodOfPass = new Main.PassArguments();
         System.out.println("Hello World !");
     };
 };

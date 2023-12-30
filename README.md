@@ -1,5 +1,16 @@
 # java-course
 java full course from begining to advance 
+[Basuc](#java-course)
+[first Code](#code)
+[public static void main explaination](#public-static-void-main)
+[Datatypes](#datatypes)
+[Conversiion](#conversiion)
+[Operators](#Operators)
+[if else Conditions ](#if-else-statements)
+[Switch Statements](#switch-statements)
+[Loops](#loops)
+[Whileloop](#while-loop)
+
 
 **Basic Java**
 - In Java we have to make sure one thing whatever file name we kept in need to put same name for public class for example :
@@ -144,5 +155,394 @@ public class MainClass {
         instance.regularMethod();
     }
 }
+```
 
+### Datatypes 
+/**
+ * ## Data Types in Java
+ *
+ * In this file, we will explore various types of data types in Java, including:
+ *
+ * - Primitive Types: Byte, short, int, long, double, float, boolean
+ * - Non-primitive Types: String, Array, Class
+ *
+ * ## Examples of Primitive Data Types
+ *
+ * ### Byte:
+ * - Range: -128 to 127
+ *
+ * ### Short:
+ * - Range: -32,768 to 32,767
+ *
+ * ### Int:
+ * - Range: -2,147,483,648 to 2,147,483,647
+ *
+ * ### Long:
+ * - Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ *
+ * ### Float:
+ * - Range: Approximately ±3.40282347E+38F (6-7 significant decimal digits)
+ *
+ * ### Double:
+ * - Range: Approximately ±1.79769313486231570E+308 (15 significant decimal digits)
+ */
+
+```
+public class Datatypes {
+    public static void main(String a[]) {
+        // Byte with a range of numbers from -128 to 127
+        // byte num1 = -128;
+        // System.out.println("Byte minimum value: " + num1);
+        // num1 = 127;
+        // System.out.println("Byte maximum value: " + num1);
+
+        // Short with a range of numbers from -32768 to 32767
+        // short num2 = -32768;
+        // System.out.println("Short minimum value: " + num2);
+        // num2 = 32767;
+        // System.out.println("Short maximum value: " + num2);
+
+        // Int with a range of numbers from -2,147,483,648 to 2,147,483,647
+        // int num3 = -2_147_483_648;
+        // System.out.println("Int minimum value: " + num3);
+        // num3 = 2_147_483_647;
+        // System.out.println("Int maximum value: " + num3);
+    }
+}
+```
+### Conversiion 
+/**
+ * Two type of Conversion in Java we have 
+ 1: Widening Conversion: : (Automatic) less to more because we don't any faer to loose to data. 
+@example 
+    {
+        int intValue = 10;
+        long longValue = intValue; // Implicit conversion (int to long)
+    }
+
+2: Narrowing Conversion:: (Manual) More to less we need to do it manual else it will be throw an error
+beacuse there is fear of loose data we decreasing range 
+@example 
+    {
+        double doubleValue = 10.5;
+        int intValue = (int) doubleValue; // Explicit conversion (double to int)
+    }
+
+*/
+
+
+```
+public class Conversion{
+    public static void main (String a[]){
+        // widening conversion :
+        // Byte x = 15;
+        // int y = x;
+        // System.out.print("widening conversion:L: " +y);
+
+        //  Narrowing Conversion :
+        double pointValue = 8.6;
+        int intValue =(int) pointValue;
+        System.out.print(" Narrowing Conversion:: " +intValue); 
+    }
+}
+```
+
+### Operators
+/**
+ 1. Arithmetic Operators:
+ int a = 10, b = 5;
+
+// Addition
+int sum = a + b; // Result: 15
+
+// Subtraction
+int difference = a - b; // Result: 5
+
+// Multiplication
+int product = a * b; // Result: 50
+
+// Division
+int quotient = a / b; // Result: 2
+
+// Modulus (Remainder)
+int remainder = a % b; // Result: 0
+
+Increment and Decrement Operators:
+int counter = 5;
+// Increment
+counter++; // Equivalent to: counter = counter + 1; // Result: 6
+
+// Decrement
+counter--; // Equivalent to: counter = counter - 1; // Result: 5
+
+// pre increment 
+int x = 5;
+++x // Result 6 
+
+// post increment 
+int y = 19;
+y++ // Result 20
+
+2. Relational Operators:
+int x = 5, y = 10;
+
+// Equal to
+boolean isEqual = (x == y); // Result: false
+
+// Not equal to
+boolean isNotEqual = (x != y); // Result: true
+
+// Greater than
+boolean isGreaterThan = (x > y); // Result: false
+
+// Less than
+boolean isLessThan = (x < y); // Result: true
+
+// Greater than or equal to
+boolean isGreaterOrEqual = (x >= y); // Result: false
+
+// Less than or equal to
+boolean isLessOrEqual = (x <= y); // Result: true
+
+3: Logical Operators:
+boolean p = true, q = false;
+
+// Logical AND
+boolean andResult = p && q; // Result: false
+
+// Logical OR
+boolean orResult = p || q; // Result: true
+
+// Logical NOT
+boolean notResult = !p; // Result: false
+
+4. Assignment Operators:
+int num = 10;
+
+// Assignment
+num = 20; // Value of 'num' is now 20
+
+// Addition assignment
+num += 5; // Equivalent to: num = num + 5; // Result: 25
+
+// Subtraction assignment
+num -= 3; // Equivalent to: num = num - 3; // Result: 22
+
+// Multiplication assignment
+num *= 2; // Equivalent to: num = num * 2; // Result: 44
+
+// Division assignment
+num /= 4; // Equivalent to: num = num / 4; // Result: 11
+
+// Modulus assignment
+num %= 3; // Equivalent to: num = num % 3; // Result: 2
+
+ */
+
+```
+public class Operators{
+    public static void main(String a[]){
+        // Airthmatic
+        // int x = 10 ;
+        // float y = 10.5f;
+        // byte result = (byte) (x + y);
+        // System.out.println("result : "+ result);
+
+        // Logical Operators : && , || , !
+        int x = 1;
+        byte y = 8;
+        short z = (short) (x + y);
+        System.out.println("Increment: " + (++x));
+        // and (& or &&) 
+        // boolean result = x > y & y < z; //true 
+        // boolean result = x > y && y > z; // false
+
+        // or || and not equal  !=
+        boolean result = x!=y || y == z;
+        System.out.print(result);
+    }
+}
+```
+
+### if-else Statements
+```
+if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}
+
+Note: we can write multiple if else conditions using : 
+else if (conditions)
+```
+
+```
+// need to import package to get input from user 
+// import java.util.Scanner;
+
+// public class If_else_con{
+//     public static viod main(String a[]){
+//          // Create a Scanner object to read input
+//         Scanner scanner = new Scanner(System.in);
+
+//         // Prompt the user for input
+//         System.out.print("Enter your age: ");
+
+//         // Read the user's input as an integer
+//         int age = scanner.nextInt();
+
+//         // // Close the scanner to release resources (good practice)
+//         // scanner.close();
+
+//         // int age = 18 ;
+//         if (age < 18)
+//             System.out.println("You are unable to Vote , your current age is "+ age);
+//     }
+// }
+```
+
+```
+public class If_else_con{
+    public static void main(String a[]){
+
+        // using if else conditions 
+        int age = 8 ;
+        // if (age < 18)
+        //     System.out.println("You are unable to Vote , your current age is "+ age);
+        // else if (( age >= 18) && (age <= 45 ))
+        //     System.out.println("You are able to Vote and you are such a young guy , your current age is "+ age);
+        // else 
+        //     System.out.println("You are able to Vote , your current age is "+ age);
+
+        // using turnery operators 
+
+        String result = age >= 18 ? ("You are able to Vote , your current age is "+ age) : ("Sorry! You are unaAle to Vote , your current age is "+ age);
+        System.out.println(result);
+    }
+}
+```
+### Switch Statements 
+In Java, the switch statement is a control flow statement that allows you to select one of many code blocks to be executed. It's typically used when you have a variable or expression and you want to perform different actions based on its value.
+
+```
+switch (expression) {
+    case value1:
+        // Code to be executed if expression equals value1
+        break;
+    case value2:
+        // Code to be executed if expression equals value2
+        break;
+    // additional cases as needed
+    default:
+        // Code to be executed if expression doesn't match any of the cases
+}
+
+```
+- The expression is evaluated once and its value is compared with the values of each case.
+- If a case matches the value of the expression, the code block under that case is executed.
+- The break statement is used to exit the switch statement. If break is omitted, execution will "fall through" to the next case.
+- The default case is optional and is executed when none of the case values match the expression.
+
+**@example**
+```
+public class Switch_Statements{
+    public static void main(String a[]){
+        int dayNumber = 5;
+        String day;
+
+        // first way to write switch statements
+        // switch(dayNumber){
+        //     case 1:
+        //         day = "Monday";
+        //         break;
+        //     case 2:
+        //         day = "Tuesday";
+        //         break;
+        //     case 3:
+        //         day = "Wednesday";
+        //         break;
+        //     case 4:
+        //         day = "Thrusday";
+        //         break;
+        //     case 5:
+        //         day = "Friday";
+        //         break;
+        //     default:
+        //         day = "Sunday";
+        // }
+        // System.out.println(day);
+
+        // Second Way using -> without break keyword and (:)
+        // day = switch(dayNumber){
+        //     case 1->  "Monday";
+        //     case 2->  "Tuesday";
+        //     case 3->  "Wednesday";
+        //     case 4->  "Thrusday";
+        //     case 5->  "Friday";
+        //     case 6->  "Saturday";
+        //     case 7->  "sunday";
+        //     default -> "Enter Valid Day Number Between 1-7 :";
+        // };
+
+        
+        // Third Way using yield keyword if want to use (:) after case instead of arrow (->) ,  without break keyword
+        day = switch(dayNumber){
+            case 1 :  yield  "Monday";
+            case 2 :  yield  "Tuesday";
+            case 3 :  yield "Wednesday";
+            case 4 :  yield "Thrusday";
+            case 5 :  yield  "Friday";
+            case 6 :  yield  "Saturday";
+            case 7 :  yield "sunday";
+            default:   yield "Enter Valid Day Number Between 1-7 :";
+        };
+
+        System.out.println(day);
+    }
+}
+```
+
+## Loops
+Loops can execute a block of code as long as a specified condition is reached.
+
+Loops are handy because they save time, reduce errors, and they make code more readable.
+
+#### while Loop 
+
+The while loop loops through a block of code as long as a specified condition is true:
+```
+public class WhileLoop{
+    public static void main(String a[]){
+        // print the number till 10 using while loop 
+        int i = 0;
+        // while (i < 11){
+        //     System.out.println(i);
+        //     i++;
+        // };
+
+        // print the sum of 1-10 numbers 
+        // int sum = 0;
+        // while (i < 11){
+        //     System.out.println(i);
+        //     sum+=i;
+        //     i++;
+        // };
+        // System.out.println("Total Sum of 1 - 10 is : " + sum);
+
+        // print the sum of first 10 even numbers 
+        int count = 0, firstTenEvenNumbersSum = 0;
+        while (count<10){
+            if (i % 2 == 0) {
+                firstTenEvenNumbersSum += i;
+                count++;
+                System.out.println(firstTenEvenNumbersSum);
+            }
+            i++;
+
+        };
+        System.out.println("Total Sum of first 10 even numbers is : " + firstTenEvenNumbersSum);
+        System.out.println("Count is  : " + count);
+
+    }
+}
 ```
