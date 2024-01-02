@@ -666,3 +666,157 @@ public class ForEachExample {
 Note :  when using the enhanced for loop (for-each loop), it is expected that the array or collection should contain elements of the same type. The type of the loop variable (element in the loop) is determined by the type of elements in the array or collection.
 
 For example, if you have an array of integers, the loop variable should be of type int. If you have an array of strings, the loop variable should be of type String. Mixing different types within the same array or collection would result in a compilation error.
+
+### Java Methods (Functions) 
+A method is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a method.
+Methods are used to perform certain actions, and they are also known as functions.
+Why use methods? To reuse code: define the code once, and use it many times.
+
+- Create a Method
+A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:
+
+**Syntax**
+```
+public class Main {
+  static void myMethod() {
+    // code to be executed
+  }
+}
+```
+Explaination:
+
+- myMethod() is the name of the method
+- static means that the method belongs to the Main class and not an object of the Main class. - You will learn more about objects and how to access methods through objects later in this tutorial.
+- - **void** means that this method does not have a return value. You will learn more about return values later in this chapter.
+
+###### Java Method Parameters and Arguments:
+
+Information can be passed to methods as parameter. Parameters act as variables inside the method.
+
+Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.
+
+Syntax of Method Declaration with Parameters:
+
+**Syntax**
+```
+returnType methodName(parameterType1 parameterName1, parameterType2 parameterName2, ...) {
+    // Method body
+    // Use parameterName1, parameterName2, etc., in the method logic
+}
+
+returnType: The type of value that the method returns. It can be void if the method does not return any value.
+methodName: The name of the method.
+parameterType1, parameterType2, ...: The data types of the parameters.
+parameterName1, parameterName2, ...: The names of the parameters used within the method.
+
+@example
+```
+class Calculator
+{
+    public int add(int n1, int n2) 
+    {
+        return n1 + n2;
+    }
+    // Dont need to create instance to access this method 
+    public static int multiply(int n1, int n2) 
+    {
+        return n1 * n2;
+    }
+}
+```
+
+```
+
+###### Syntax of Method Invocation with Arguments:
+
+
+**Syntax**
+```
+// methodName(argument1, argument2, ...)
+
+methodName: The name of the method.
+argument1, argument2, ...: The values passed to the method, corresponding to the parameters in order.
+
+@example
+```
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        
+        // Calling the add method with arguments 5 and 7
+        int result = calculator.add(5, 7);
+        
+        System.out.println("Result: " + result);
+    }
+```
+
+```
+
+
+##### Method Overloading
+With method overloading, multiple methods can have the same name with different parameters:
+@example
+```
+public class Calculator {
+
+    // Method to add two integers
+    public int add(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    // Overloaded method to add two doubles
+    public double add(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        
+        int resultInt = calculator.add(5, 7);
+        System.out.println("Result (int): " + resultInt);
+
+        double resultDouble = calculator.add(5.5, 7.5);
+        System.out.println("Result (double): " + resultDouble);
+    }
+}
+
+Result (int): 12
+Result (double): 13.0
+
+```
+
+@batter example 
+
+```
+public class Printer {
+
+    // Method to print a string
+    public void print(String message) {
+        System.out.println(message);
+    }
+
+    // Overloaded method to print an integer
+    public void print(int number) {
+        System.out.println("Number: " + number);
+    }
+
+    // Overloaded method to print two integers
+    public void print(int num1, int num2) {
+        System.out.println("Numbers: " + num1 + " and " + num2);
+    }
+
+    public static void main(String[] args) {
+        Printer printer = new Printer();
+        
+        printer.print("Hello, World!");
+        printer.print(42);
+        printer.print(3, 7);
+    }
+}
+
+Results:
+Hello, World!
+Number: 42
+Numbers: 3 and 7
+
+```
