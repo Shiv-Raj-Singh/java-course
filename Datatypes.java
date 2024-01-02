@@ -1,7 +1,7 @@
 /**
 in this file we will learn several types of Data Types in Java
  we having following types of datatypes in java
- primitive :  Byte , short , int , long , double , float , boolean 
+ primitive :  Byte , short , int , long , double , float , boolean , char
  Non-primitive : String , Array , class 
 
  in this file we having example of primitive datatypes 
@@ -46,5 +46,8 @@ public class Datatypes{
         // num3 = 2_147_483_647 ;
         // System.out.println("int maximum value : "+num3);
 
+        // char stands for single character whether that is an alphabate or numbers 
+        char x = 'A';
+        System.out.println("Character is " + x);
     }
 }

@@ -1,6 +1,7 @@
 # java-course
-java full course from begining to advance 
-[Basuc](#java-course)  
+java full course from begining to advance
+ 
+[Basic](#java-course)  
 [first Code](#code)  
 [public static void main explaination](#public-static-void-main)  
 [Datatypes](#datatypes)  
@@ -10,6 +11,11 @@ java full course from begining to advance
 [Switch Statements](#switch-statements)  
 [Loops](#loops)  
 [Whileloop](#while-loop)  
+[Do While Loop](#do-while-loop)  
+[For Loop](#for-loop)  
+[Foreach Loop](#for-each-loop)  
+
+
 
 
 
@@ -164,7 +170,7 @@ public class MainClass {
  *
  * In this file, we will explore various types of data types in Java, including:
  *
- * - Primitive Types: Byte, short, int, long, double, float, boolean
+ * - Primitive Types: Byte, short, int, long, double, float, boolean,char
  * - Non-primitive Types: String, Array, Class
  *
  * ## Examples of Primitive Data Types
@@ -547,3 +553,116 @@ public class WhileLoop{
     }
 }
 ```
+
+### do while Loop 
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+**Syntax**
+```
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+
+```
+public class DoWhileLoop {
+    public static void main(String a[]){
+        // print reverse numbers 10 to 1 
+        // int x = 10;
+        // do
+        // {
+        //     System.out.println(x);
+        //     x--;
+        // }
+        // while (x > 0);
+
+        // print the sum of first 10 odd numbers 
+        int i = 0;
+        int count = 0;
+        int sum = 0;
+        do{
+            if(i%2!=0){
+                sum+=i;
+                count++;
+            };
+            i++;
+        }while(count < 23);
+
+        System.out.println(sum);
+    }
+}
+```
+
+### For Loop
+
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+
+**Syntax**
+```
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+```
+- Statement 1 is executed (one time) before the execution of the code block.
+
+- Statement 2 defines the condition for executing the code block.
+
+- Statement 3 is executed (every time) after the code block has been executed.
+
+@example 
+```
+public class ForLoop {
+    public static void main(String a[]) {
+        // print the sum of first 15 numbers including print temself
+        int sum = 0;
+        for (int i = 0; i <= 15; i++) {
+            sum += i;
+            System.out.println("The value of current number is : " + i + "the value of sum is :  " + sum);
+        }
+        ;
+        System.out.println("The value of current number is : " + sum);
+
+    }
+}
+
+```
+
+### For-Each Loop
+There is also a "for-each" loop, which is used exclusively to loop through elements in an array:
+
+**Syntax**
+```
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+```
+
+The enhanced for loop, also known as the "for-each" loop, provides a simpler way to iterate over elements in an array or a collection (like a List). It is particularly useful when you don't need to keep track of the index or manipulate it during the iteration.
+
+@example
+```
+
+public class ForEachExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Enhanced for loop to iterate over the array
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (String i : cars) {
+            System.out.println(i);
+        }
+
+    }
+}
+
+```
+
+Note :  when using the enhanced for loop (for-each loop), it is expected that the array or collection should contain elements of the same type. The type of the loop variable (element in the loop) is determined by the type of elements in the array or collection.
+
+For example, if you have an array of integers, the loop variable should be of type int. If you have an array of strings, the loop variable should be of type String. Mixing different types within the same array or collection would result in a compilation error.
