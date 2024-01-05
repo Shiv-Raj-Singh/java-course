@@ -1128,6 +1128,38 @@ public class TwoD_3D_Arrays {
 ##### 3D Array
 A 3D array (three-dimensional array) is an extension of the concept of a 2D array to three dimensions. Just like a 2D array is an array of arrays, a 3D array is an array of 2D arrays. It can be visualized as a cube or a set of multiple 2D arrays arranged along a third dimension. Understanding 3D arrays can be challenging for beginners, but let's break it down:
 
+**Syntax**
+```
+[[[3, 3], [1, 2], [4, 5]], [[2, 7], [9, 4], [6, 1]], [[1, 7], [1, 4], [5, 1]], [[1, 9], [4, 7], [1, 6]]]
+
+[
+  // First level: Outermost array (length: 4)
+  [
+    // Second level: Nested array 1 (length: 3)
+    [
+      // Third level: Innermost array 1 (length: 2)
+      [3, 3], [1, 2], [4, 5]
+    ],
+    // Second level: Nested array 2 (length: 3)
+    [
+      // Third level: Innermost array 2 (length: 2)
+      [2, 7], [9, 4], [6, 1]
+    ],
+    // Second level: Nested array 3 (length: 3)
+    [
+      // Third level: Innermost array 3 (length: 2)
+      [1, 7], [1, 4], [5, 1]
+    ],
+    // Second level: Nested array 4 (length: 3)
+    [
+      // Third level: Innermost array 4 (length: 2)
+      [1, 9], [4, 7], [1, 6]
+    ]
+  ]
+]
+
+```
+
 ```
 // Declaration and initialization of a 3D array
 int[][][] threeDArray = new int[3][4][5];
@@ -1227,3 +1259,6 @@ output:
 }
 
 ```
+
+
+

@@ -41,7 +41,7 @@ class MethodForArray {
 
 }
 
-public class TwoD_3D_Arrays {
+public class ArrayMain {
     public static void main(String a[]) {
         int arr[][] = new int[3][4];
 
@@ -96,8 +96,9 @@ public class TwoD_3D_Arrays {
             }
             System.out.println();
         }
-        ;
+
         
         System.out.println(MethodForArray.arrayToString(threeDArr));
     }
 }
+
