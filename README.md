@@ -381,7 +381,7 @@ public class Operators{
 ```
 
 ### if-else Statements
-```
+```java
 if (condition) {
     // Code to be executed if the condition is true
 } else {
@@ -736,19 +736,16 @@ class Calculator
 }
 ```
 
-```
-
 ###### Syntax of Method Invocation with Arguments:
-
 **Syntax**
 ```java
-// methodName(argument1, argument2, ...)
-
+    methodName(argument1, argument2, ...)
+```
 methodName: The name of the method.
 argument1, argument2, ...: The values passed to the method, corresponding to the parameters in order.
 
 @example
-```
+```java
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         
@@ -759,7 +756,6 @@ argument1, argument2, ...: The values passed to the method, corresponding to the
     }
 ```
 
-```
 
 
 ##### Method Overloading
