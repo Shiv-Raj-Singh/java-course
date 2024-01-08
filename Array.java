@@ -11,10 +11,12 @@ public class Array {
 
         String strArray[] = new String[5];
 
-        for (int i = 0 ; i < strArray.length ; i++){
+        for (int i = 0; i < strArray.length; i++) {
             System.out.println(strArray[i]);
         }
 
-        
+        String[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+        System.out.println(cars.length);
+
     }
 }

@@ -22,6 +22,10 @@ java full course from begining to advance
 [Java Array Methods](#array-methods)  
 [Java 2D Array & Jagged Array](#2d-array--jagged-array)  
 [3D Array](#3d-array)
+[String](#strings)
+[Types Of Strings in Java ](#default-type-of-strings-in-java)
+[All Strings Methods into Java](#string-methods)
+
 
 
 
@@ -1260,5 +1264,222 @@ output:
 
 ```
 
+#### Strings
+
+In Java, a String is an object that represents a sequence of characters. It is widely used in Java programming and provides a variety of methods for manipulating and working with text data. Here, I'll provide an overview of some common String methods with simple examples:
+
+```
+public class Strings1 {
+    public static void main(String a[]){
+        // different ways to create a string string is non primitive data types in java 
+        String str1 = "Shiv Raj";
+        // Or
+        String str2 = new String(" Singh");
+        System.out.println(str1 + str2);
+        String name = str1 + str2 ;
+
+        // few string method 
+        // charAt find any character using index 
+        // System.out.println("In Shiv Raj chatAt on 5 index : " + str1.charAt(5));
+        for (int i = 0 ;i < name.length() ; i++ ){
+            System.err.println(name.charAt(i));
+        }
+    }
+}
+
+```
+
+### Default Type of Strings in Java
+In Java, strings are objects of the `String` class. By default, strings in Java are immutable, meaning their values cannot be changed after they are created.
+
+###### Immutable Strings
+- **Definition:** Immutable strings are strings whose values cannot be modified once they are created.
+- **Characteristics:**
+  - Any operation that appears to modify a string actually creates a new string.
+  - Immutable strings are thread-safe, making them safer to use in a multithreaded environment.
+
+ Example:
+ 
+```java
+String immutableStr = "Hello";
+immutableStr = immutableStr.concat(" World"); // Creates a new string
+System.out.println(immutableStr); // Prints "Hello World"
+```
+
+###### Mutable Strings
+While the String class is immutable, there are alternatives for mutable strings, such as StringBuilder and StringBuffer.
+
+StringBuilder:
+A mutable sequence of characters.
+More efficient than String for performing concatenation operations.
+
+```java
+StringBuilder mutableStr = new StringBuilder("Hello");
+mutableStr.append(" World"); // Modifies the same object
+System.out.println(mutableStr.toString()); // Prints "Hello World"
+
+StringBuffer synchronizedStr = new StringBuffer("Hello");
+synchronizedStr.append(" World"); // Modifies the same object
+System.out.println(synchronizedStr.toString()); // Prints "Hello World"
+```
+
+```java
+public class StringExamples {
+    public static void main(String[] args) {
+        // Immutable String Example
+        String immutableStr = "Hello";
+        immutableStr = immutableStr.concat(" World"); // Creates a new string
+        System.out.println(immutableStr); // Prints "Hello World"
+
+        // Mutable StringBuilder Example
+        StringBuilder mutableStr = new StringBuilder("Hello");
+        mutableStr.append(" World"); // Modifies the same object
+        System.out.println(mutableStr.toString()); // Prints "Hello World"
+
+        // Mutable StringBuffer Example
+        StringBuffer synchronizedStr = new StringBuffer("Hello");
+        synchronizedStr.append(" World"); // Modifies the same object
+        System.out.println(synchronizedStr.toString()); // Prints "Hello World"
+    }
+}
+
+```
+
+##### Code for mutable and immutable strings
+```java
+/**
+ * Java File: StringDefinitions.java
+ * ---------------------------------
+ * This file contains examples and comments explaining the concepts of strings,
+ * immutable strings, and mutable strings in Java.
+ */
+
+// Default type of strings in Java
+// Strings are objects of the String class and are immutable by default.
+
+// Immutable Strings
+// - Definition: Strings whose values cannot be modified once they are created.
+// - Characteristics:
+//   - Any operation that appears to modify a string actually creates a new string.
+//   - Immutable strings are thread-safe.
+
+// Mutable Strings
+// There are alternatives for mutable strings, such as StringBuilder and StringBuffer.
+
+/**
+ * Example: Immutable String
+ * - The example showcases the creation and manipulation of an immutable string using the String class.
+ */
+public class StringDefinitions {
+    public static void main(String[] args) {
+        // Immutable String Example
+        String immutableStr = "Hello";
+        immutableStr = immutableStr.concat(" World"); // Creates a new string
+        System.out.println(immutableStr); // Prints "Hello World"
+    }
+
+    /**
+     * Example: Mutable StringBuilder
+     * - The example demonstrates the use of StringBuilder, a mutable sequence of characters.
+     * - StringBuilder is more efficient than String for concatenation operations.
+     */
+    private static void mutableStringBuilderExample() {
+        StringBuilder mutableStr = new StringBuilder("Hello");
+        mutableStr.append(" World"); // Modifies the same object
+        System.out.println(mutableStr.toString()); // Prints "Hello World"
+    }
+
+    /**
+     * Example: Mutable StringBuffer
+     * - The example showcases the use of StringBuffer, similar to StringBuilder but synchronized.
+     * - StringBuffer is useful in multithreaded environments where synchronization is needed.
+     */
+    private static void mutableStringBufferExample() {
+        StringBuffer synchronizedStr = new StringBuffer("Hello");
+        synchronizedStr.append(" World"); // Modifies the same object
+        System.out.println(synchronizedStr.toString()); // Prints "Hello World"
+    }
+}
+
+```
 
 
+### String Methods
+- **Creating Strings:**
+Strings can be created using the String class constructor or by using string literals.
+```
+String str1 = new String("Hello");
+String str2 = "World";
+
+```
+
+- **Concatenation:**
+The concat method is used to concatenate two strings.
+```
+// using concat method
+String result = str1.concat(str2);
+// or using the + operator
+String result2 = str1 + str2;
+
+```
+
+- **Length:**
+The length method returns the length of the string.
+
+```
+int length = result.length();
+```
+
+- **Substring:**
+The substring method extracts a portion of a string.
+```
+String sub = result.substring(3); // Starts from index 3 to the end
+String sub2 = result.substring(0, 5); // Starts from index 0 up to, but not including, index 5
+```
+
+- **Comparison:**
+The equals method compares two strings for equality.
+```
+boolean isEqual = str1.equals(str2);
+```
+
+- **IgnoreCase Comparison:**
+The equalsIgnoreCase method compares two strings for equality, ignoring case.
+```
+boolean isEqualIgnoreCase = str1.equalsIgnoreCase(str2);
+```
+- **Searching:**
+The indexOf method returns the index of the first occurrence of a character or substring.
+```
+int index = result.indexOf("l");
+```
+
+- **Conversion:**
+
+toUpperCase and toLowerCase methods convert a string to uppercase or lowercase.
+
+```
+String upper = result.toUpperCase();
+String lower = result.toLowerCase();
+```
+
+- **Trimming:**
+The trim method removes leading and trailing whitespaces.
+```
+String withSpaces = "   Hello   ";
+String trimmed = withSpaces.trim();
+```
+
+- **Replacing:**
+The replace method replaces occurrences of a specified character or substring.
+```
+String replaced = result.replace("l", "X");
+```
+
+- **Splitting:**
+The split method splits a string into an array of substrings based on a specified delimiter.
+
+```
+String sentence = "This is a simple sentence";
+String[] words = sentence.split(" ");
+```
