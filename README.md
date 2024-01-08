@@ -21,11 +21,10 @@ java full course from begining to advance
 [Java Array](#array)  
 [Java Array Methods](#array-methods)  
 [Java 2D Array & Jagged Array](#2d-array--jagged-array)  
-[3D Array](#3d-array)
-[String](#strings)
-[Types Of Strings in Java ](#default-type-of-strings-in-java)
+[3D Array](#3d-array)  
+[String](#strings)  
+[Types Of Strings in Java](#default-type-of-strings-in-java)  
 [All Strings Methods into Java](#string-methods)
-
 
 
 
@@ -33,7 +32,7 @@ java full course from begining to advance
 - In Java we have to make sure one thing whatever file name we kept in need to put same name for public class for example :
 File Name : Main.java 
 ### Code : 
-```
+```java
 // this is the first program in java 
 public class Main {
              ----
@@ -61,7 +60,7 @@ Method Name (main):
 [Code](#code)
 
 #### Lets learn more about **static** Keyword : 
-```
+```java
 public class ExampleClass {
     
     // The main method is a special method and serves as the entry point of a Java program
@@ -89,7 +88,7 @@ Unlike regular methods (like regularMethod in the example), the main method does
 
 Example: creating one more class where we ll use **ExampleClass** both method (main ,regularMethod )
 - ###### Note : To run the main method, you don't need to create an instance of ExampleClass. Instead, you can directly call it as follows:
-```
+```java
 public class MainClass {
     public static void main(String[] args) {
         ExampleClass.main(args); // Calling the main method without creating an instance
@@ -99,7 +98,7 @@ public class MainClass {
 
 ```
 - ###### : On the other hand, the regularMethod would need an instance to be called:
-```
+```java
 public class MainClass {
     public static void main(String[] args) {
         ExampleClass exampleInstance = new ExampleClass();
@@ -109,7 +108,7 @@ public class MainClass {
 ```
 - When you use the static keyword before a method in Java, it means that the method belongs to the class itself rather than to instances of the class. This allows you to call the method directly on the class without creating an instance of the class.
 
-```
+```java
 public class ExampleClass {
 
     // A static method that can be called without creating an instance
@@ -141,7 +140,7 @@ public class ExampleClass {
 **Let's start with a class containing a static method:**
 
 **ExampleClassWithStaticMethod.java**  // file name
-```
+```java
 public class ExampleClassWithStaticMethod {
     public static void staticMethod() {
         System.out.println("This is a static method.");
@@ -149,7 +148,7 @@ public class ExampleClassWithStaticMethod {
 }
 ```
 **ExampleClassWithRegularMethod.java** // File name
-```
+```java
 public class ExampleClassWithRegularMethod {
     public void regularMethod() {
         System.out.println("This is a regular method.");
@@ -159,7 +158,7 @@ public class ExampleClassWithRegularMethod {
 
 
 **MainClass.java** // file name
-```
+```java
 public class MainClass {
     public static void main(String[] args) {
         // Calling the static method directly on the class
@@ -204,7 +203,7 @@ public class MainClass {
  * - Range: Approximately ±1.79769313486231570E+308 (15 significant decimal digits)
  */
 
-```
+```java
 public class Datatypes {
     public static void main(String a[]) {
         // Byte with a range of numbers from -128 to 127
@@ -248,7 +247,7 @@ beacuse there is fear of loose data we decreasing range
 */
 
 
-```
+```java
 public class Conversion{
     public static void main (String a[]){
         // widening conversion :
@@ -356,7 +355,7 @@ num %= 3; // Equivalent to: num = num % 3; // Result: 2
 
  */
 
-```
+```java
 public class Operators{
     public static void main(String a[]){
         // Airthmatic
@@ -393,7 +392,7 @@ Note: we can write multiple if else conditions using :
 else if (conditions)
 ```
 
-```
+```java
 // need to import package to get input from user 
 // import java.util.Scanner;
 
@@ -418,7 +417,7 @@ else if (conditions)
 // }
 ```
 
-```
+```java
 public class If_else_con{
     public static void main(String a[]){
 
@@ -441,7 +440,7 @@ public class If_else_con{
 ### Switch Statements 
 In Java, the switch statement is a control flow statement that allows you to select one of many code blocks to be executed. It's typically used when you have a variable or expression and you want to perform different actions based on its value.
 
-```
+```java
 switch (expression) {
     case value1:
         // Code to be executed if expression equals value1
@@ -461,7 +460,7 @@ switch (expression) {
 - The default case is optional and is executed when none of the case values match the expression.
 
 **@example**
-```
+```java
 public class Switch_Statements{
     public static void main(String a[]){
         int dayNumber = 5;
@@ -527,7 +526,7 @@ Loops are handy because they save time, reduce errors, and they make code more r
 #### while Loop 
 
 The while loop loops through a block of code as long as a specified condition is true:
-```
+```java
 public class WhileLoop{
     public static void main(String a[]){
         // print the number till 10 using while loop 
@@ -567,7 +566,7 @@ public class WhileLoop{
 ### do while Loop 
 The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
 **Syntax**
-```
+```java
 do {
   // code block to be executed
 }
@@ -576,7 +575,7 @@ while (condition);
 
 The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
 
-```
+```java
 public class DoWhileLoop {
     public static void main(String a[]){
         // print reverse numbers 10 to 1 
@@ -610,7 +609,7 @@ public class DoWhileLoop {
 When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
 
 **Syntax**
-```
+```java
 for (statement 1; statement 2; statement 3) {
   // code block to be executed
 }
@@ -622,7 +621,7 @@ for (statement 1; statement 2; statement 3) {
 - Statement 3 is executed (every time) after the code block has been executed.
 
 @example 
-```
+```java
 public class ForLoop {
     public static void main(String a[]) {
         // print the sum of first 15 numbers including print temself
@@ -643,7 +642,7 @@ public class ForLoop {
 There is also a "for-each" loop, which is used exclusively to loop through elements in an array:
 
 **Syntax**
-```
+```java
 for (type variableName : arrayName) {
   // code block to be executed
 }
@@ -652,7 +651,7 @@ for (type variableName : arrayName) {
 The enhanced for loop, also known as the "for-each" loop, provides a simpler way to iterate over elements in an array or a collection (like a List). It is particularly useful when you don't need to keep track of the index or manipulate it during the iteration.
 
 @example
-```
+```java
 
 public class ForEachExample {
     public static void main(String[] args) {
@@ -688,7 +687,7 @@ Why use methods? To reuse code: define the code once, and use it many times.
 A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:
 
 **Syntax**
-```
+```java
 public class Main {
   static void myMethod() {
     // code to be executed
@@ -710,7 +709,7 @@ Parameters are specified after the method name, inside the parentheses. You can 
 Syntax of Method Declaration with Parameters:
 
 **Syntax**
-```
+```java
 returnType methodName(parameterType1 parameterName1, parameterType2 parameterName2, ...) {
     // Method body
     // Use parameterName1, parameterName2, etc., in the method logic
@@ -722,7 +721,7 @@ parameterType1, parameterType2, ...: The data types of the parameters.
 parameterName1, parameterName2, ...: The names of the parameters used within the method.
 
 @example
-```
+```java
 class Calculator
 {
     public int add(int n1, int n2) 
@@ -742,7 +741,7 @@ class Calculator
 ###### Syntax of Method Invocation with Arguments:
 
 **Syntax**
-```
+```java
 // methodName(argument1, argument2, ...)
 
 methodName: The name of the method.
@@ -766,7 +765,7 @@ argument1, argument2, ...: The values passed to the method, corresponding to the
 ##### Method Overloading
 With method overloading, multiple methods can have the same name with different parameters:
 @example
-```
+```java
 public class Calculator {
 
     // Method to add two integers
@@ -797,7 +796,7 @@ Result (double): 13.0
 
 @batter example 
 
-```
+```java
 public class Printer {
 
     // Method to print a string
@@ -835,7 +834,7 @@ Numbers: 3 and 7
 In Java, an array is a data structure that allows you to store multiple values of the same type under a single variable name. Arrays are particularly useful when you need to work with a collection of elements, such as a list of integers or a set of strings. Here's a detailed explanation of how to define and use arrays in Java
 
 **Sysntax**
-```
+```java
 dataType[] arrayName; // Declaration
 arrayName = new dataType[size]; // Initialization
 
@@ -846,7 +845,7 @@ arrayName = new dataType[size]; // Initialization
 ```
 
 Initializing Arrays:
-```
+```java
 // Initializing during declaration
 int[] numbers = {1, 2, 3, 4, 5};
 
@@ -858,7 +857,7 @@ numbersLater = new int[]{1, 2, 3, 4, 5};
 
 Accessing Array Elements:
 
-```
+```java
 int[] numbers = {1, 2, 3, 4, 5};
 
 // Accessing elements
@@ -868,7 +867,7 @@ int thirdElement = numbers[2]; // 3
 ```
 
 - Our Code
-```
+```java
 public class Array {
     public static void main(String a[]) {
 
@@ -894,7 +893,7 @@ public class Array {
 
 ##### Array Methods
 
-```
+```java
 public class ArrayMethodsExample {
     public static void main(String[] args) {
         // Declare and create an array
@@ -1040,7 +1039,7 @@ This creates a 2D array with 3 rows and 4 columns, initializing all elements to 
 
  
 // Initialization with values
-```
+```java
 int[][] matrix = {
     {1, 2, 3},
     {4, 5, 6},
@@ -1084,7 +1083,7 @@ Use Cases:
 
 Our Code:
 
-```
+```java
 public class TwoD_3D_Arrays {
     public static void main(String a[]) {
         int arr[][] = new int[3][4];
@@ -1133,7 +1132,7 @@ public class TwoD_3D_Arrays {
 A 3D array (three-dimensional array) is an extension of the concept of a 2D array to three dimensions. Just like a 2D array is an array of arrays, a 3D array is an array of 2D arrays. It can be visualized as a cube or a set of multiple 2D arrays arranged along a third dimension. Understanding 3D arrays can be challenging for beginners, but let's break it down:
 
 **Syntax**
-```
+```java
 [[[3, 3], [1, 2], [4, 5]], [[2, 7], [9, 4], [6, 1]], [[1, 7], [1, 4], [5, 1]], [[1, 9], [4, 7], [1, 6]]]
 
 [
@@ -1164,7 +1163,7 @@ A 3D array (three-dimensional array) is an extension of the concept of a 2D arra
 
 ```
 
-```
+```java
 // Declaration and initialization of a 3D array
 int[][][] threeDArray = new int[3][4][5];
 
@@ -1199,7 +1198,7 @@ Use Cases:
 - Game Development: 3D arrays can be used to represent game worlds or environments.
 - Scientific Data: In scientific simulations, a 3D array might be used to store data in three-dimensional space.
 
-```
+```java
 // Declaration and initialization of a 3D array with values
 
 public class ThreeDArrayInitialization {
@@ -1268,7 +1267,7 @@ output:
 
 In Java, a String is an object that represents a sequence of characters. It is widely used in Java programming and provides a variety of methods for manipulating and working with text data. Here, I'll provide an overview of some common String methods with simple examples:
 
-```
+```java
 public class Strings1 {
     public static void main(String a[]){
         // different ways to create a string string is non primitive data types in java 
@@ -1482,4 +1481,64 @@ The split method splits a string into an array of substrings based on a specifie
 ```
 String sentence = "This is a simple sentence";
 String[] words = sentence.split(" ");
+```
+
+#### Code 
+```java
+/**
+ * Java File: StringMethodsExample.java
+ * ---------------------------------------
+ * This file demonstrates various string methods in Java with comments explaining each method.
+ */
+
+public class StringMethodsExample {
+    public static void main(String[] args) {
+        // String Methods Examples
+
+        // 1. length() - Returns the length of the string.
+        String str = "Hello, World!";
+        int length = str.length();
+        System.out.println("1. length(): " + length);
+
+        // 2. charAt() - Returns the character at the specified index.
+        char charAtIndex = str.charAt(7);
+        System.out.println("2. charAt(7): " + charAtIndex);
+
+        // 3. substring() - Returns a substring from the specified index.
+        String substring = str.substring(7);
+        System.out.println("3. substring(7): " + substring);
+
+        // 4. indexOf() - Returns the index of the first occurrence of a character or substring.
+        int indexOfComma = str.indexOf(",");
+        System.out.println("4. indexOf(','): " + indexOfComma);
+
+        // 5. contains() - Checks if a string contains a specified sequence of characters.
+        boolean containsHello = str.contains("Hello");
+        System.out.println("5. contains('Hello'): " + containsHello);
+
+        // 6. equals() - Compares two strings for equality.
+        boolean isEqual = str.equals("Hello, World!");
+        System.out.println("6. equals('Hello, World!'): " + isEqual);
+
+        // 7. toUpperCase() - Converts a string to uppercase.
+        String upperCaseStr = str.toUpperCase();
+        System.out.println("7. toUpperCase(): " + upperCaseStr);
+
+        // 8. toLowerCase() - Converts a string to lowercase.
+        String lowerCaseStr = str.toLowerCase();
+        System.out.println("8. toLowerCase(): " + lowerCaseStr);
+
+        // 9. replace() - Replaces occurrences of a specified character or substring.
+        String replacedStr = str.replace("World", "Universe");
+        System.out.println("9. replace('World', 'Universe'): " + replacedStr);
+
+        // 10. split() - Splits a string into an array of substrings based on a specified delimiter.
+        String[] splitStr = str.split(",");
+        System.out.println("10. split(','): ");
+        for (String s : splitStr) {
+            System.out.println("   " + s.trim());
+        }
+    }
+}
+
 ```
