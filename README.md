@@ -26,12 +26,11 @@ java full course from begining to advance
 [Types Of Strings in Java](#default-type-of-strings-in-java)  
 [All Strings Methods into Java](#string-methods)  
 
-// New Concept 
-[OOPs object-oriented-programming](#oops-object-oriented-programming)   
+// New Concept   
+[OOPs object-oriented-programming](#oops-object-oriented-programming)     
 [Core Concept of Oops](#core-concepts-of-oop)   
-
-
-
+[inheritance](#inheritance)   
+[inheritance Code in Details](#break-the-code)     
 
 
 
@@ -1946,3 +1945,133 @@ public class AllInheritanceExample {
 - *implements*: In Java, the implements keyword is used to indicate that a class is implementing one or more interfaces (multiple inheritance).
 
 - *super*: In Java, the super keyword is used to call the constructor or a method of the immediate superclass.
+
+
+#### Break The Code 
+
+1. Single Inheritance:
+In single inheritance, a class can inherit from only one superclass.
+
+Base Class (Superclass) - Animal:
+```java
+class Animal {
+    String species;
+
+    public Animal(String species) {
+        this.species = species;
+    }
+
+    void eat() {
+        System.out.println(species + " is eating");
+    }
+}
+```
+
+Animal is a simple class with an attribute species and a method eat.
+Subclass - Dog (Single Inheritance):
+```java
+class Dog extends Animal {
+    String breed;
+
+    public Dog(String species, String breed) {
+        super(species); // Call constructor of the superclass (Animal)
+        this.breed = breed;
+    }
+
+    void bark() {
+        System.out.println(breed + " is barking");
+    }
+}
+```
+
+Dog extends Animal, inheriting the attributes and methods of Animal.
+It has an additional attribute breed and a method bark.
+2. Multiple Inheritance (using Interfaces):
+In Java, a class can implement multiple interfaces, achieving a form of multiple inheritance.
+
+First Interface - Swimmer:
+```java
+interface Swimmer {
+    void swim();
+}
+```
+Second Interface - Jumper:
+```java
+interface Jumper {
+    void jump();
+}
+```
+Combined Subclass - Labrador (Multiple Inheritance):
+
+```java
+class Labrador extends Dog implements Swimmer, Jumper {
+    public Labrador(String species, String breed) {
+        super(species, breed); // Call constructor of the immediate superclass (Dog)
+    }
+
+    @Override
+    public void swim() {
+        System.out.println(breed + " is swimming");
+    }
+
+    @Override
+    public void jump() {
+        System.out.println(breed + " is jumping");
+    }
+}
+```
+Labrador extends Dog and implements both Swimmer and Jumper interfaces.
+It inherits attributes and methods from Dog and the interfaces.
+3. Multilevel Inheritance:
+In multilevel inheritance, a class extends another class, creating a chain of inheritance.
+
+Subclass - Poodle (Multilevel Inheritance):
+
+```java
+class Poodle extends Dog {
+    String color;
+
+    public Poodle(String species, String breed, String color) {
+        super(species, breed); // Call constructor of the immediate superclass (Dog)
+        this.color = color;
+    }
+
+    void groom() {
+        System.out.println(breed + " with color " + color + " is being groomed");
+    }
+}
+```
+Poodle extends Dog, creating a chain of inheritance.
+It has an additional attribute color and a method groom.
+4. Main Class - AllInheritanceExample:
+
+```java
+public class AllInheritanceExample {
+    public static void main(String[] args) {
+        // Single Inheritance Example
+        Dog myDog = new Dog("Canine", "Golden Retriever");
+        myDog.eat(); // Inherited method
+        myDog.bark(); // Method from the subclass
+
+        System.out.println("--------");
+
+        // Multiple Inheritance Example
+        Labrador myLabrador = new Labrador("Canine", "Labrador");
+        myLabrador.eat(); // Inherited method from the Animal class
+        myLabrador.bark(); // Inherited method from the Dog class
+        myLabrador.swim(); // Method from the Swimmer interface
+        myLabrador.jump(); // Method from the Jumper interface
+
+        System.out.println("--------");
+
+        // Multilevel Inheritance Example
+        Poodle myPoodle = new Poodle("Canine", "Toy Poodle", "White");
+        myPoodle.eat(); // Inherited method from the Animal class
+        myPoodle.bark(); // Inherited method from the Dog class
+        myPoodle.groom(); // Method from the subclass
+    }
+}
+```
+
+The main method demonstrates creating objects and invoking methods from different classes, showcasing all types of inheritance.
+Dog, Labrador, and Poodle are used to demonstrate single, multiple, and multilevel inheritance, respectively.
