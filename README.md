@@ -24,7 +24,14 @@ java full course from begining to advance
 [3D Array](#3d-array)  
 [String](#strings)  
 [Types Of Strings in Java](#default-type-of-strings-in-java)  
-[All Strings Methods into Java](#string-methods)
+[All Strings Methods into Java](#string-methods)  
+
+// New Concept 
+[OOPs object-oriented-programming](#oops-object-oriented-programming)   
+[Core Concept of Oops](#core-concepts-of-oop)   
+
+
+
 
 
 
@@ -1538,3 +1545,404 @@ public class StringMethodsExample {
 }
 
 ```
+
+### Oops Object-Oriented Programming.
+Object-Oriented Programming is a programming paradigm that uses objects to design and organize code. An object is a self-contained unit that consists of both data and the methods that operate on the data. OOP promotes the concept of "objects" that interact with each other to achieve a specific goal
+
+```java
+// Define a class called Car
+class Car {
+    // Attributes
+    String brand;
+    int year;
+
+    // Constructor
+    public Car(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    // Method to display information
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Create objects of the Car class
+        Car car1 = new Car("Toyota", 2022);
+        Car car2 = new Car("Honda", 2021);
+
+        // Call methods on objects
+        car1.displayInfo();
+        System.out.println("--------");
+        car2.displayInfo();
+    }
+}
+
+output :
+Brand: Toyota
+Year: 2022
+--------
+Brand: Honda
+Year: 2021
+
+```
+
+#### Core Concepts of OOP:
+
+- 1. Classes:
+A class is a blueprint or a template for creating objects.
+It defines the properties (attributes/data) and behaviors (methods/functions) that the objects created from it will have.
+
+```java
+// Define a class called Student
+class Student {
+    // Attributes
+    String name;
+    int age;
+
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+```
+
+
+-2. Objects:
+An object is an instance of a class. It is a tangible entity that represents a real-world entity.
+Objects have states (data) and behaviors (methods).
+
+```java
+// Main class
+public class ObjectExample {
+    public static void main(String[] args) {
+        // Create objects of the Student class
+        Student student1 = new Student("Alice", 20);
+        Student student2 = new Student("Bob", 22);
+
+        // Call methods on objects
+        student1.displayInfo();
+        System.out.println("--------");
+        student2.displayInfo();
+    }
+}
+
+```
+
+-3. Encapsulation:
+Encapsulation is the bundling of data (attributes) and the methods that operate on that data into a single unit (class).
+It helps in hiding the internal details of the object and exposing only what is necessary.
+
+```java
+// Encapsulation Example
+class BankAccount {
+    private double balance;
+
+    // Setter method for balance
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        } else {
+            System.out.println("Invalid balance amount");
+        }
+    }
+
+    // Getter method for balance
+    public double getBalance() {
+        return balance;
+    }
+}
+
+```
+
+-4. Inheritance:
+Inheritance is a mechanism where a new class (subclass/derived class) inherits properties and behaviors from an existing class (superclass/base class).
+It promotes code reusability.
+
+```java
+// Inheritance Example
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+```
+-5. Polymorphism:
+Polymorphism allows objects of different classes to be treated as objects of a common superclass.
+It can be achieved through method overloading and method overriding.
+
+```java
+// Polymorphism - Method Overloading Example
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+// Polymorphism - Method Overriding Example
+class Shape {
+    void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+```
+
+Certainly! Polymorphism is a key concept in Object-Oriented Programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It provides a way to create more flexible and reusable code. There are two main types of polymorphism: method overloading and method overriding.
+
+1. Method Overloading:
+Method overloading allows a class to have multiple methods with the same name but different parameter lists (number or type of parameters). It is also known as compile-time or static polymorphism.
+
+Example:
+
+```java
+class Calculator {
+    // Method Overloading
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+```
+In this example, the Calculator class has two add methods with different parameter types (int and double). The appropriate method is chosen during compile-time based on the arguments provided when calling the method.
+
+```java
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        int sumInt = calculator.add(5, 10);
+        double sumDouble = calculator.add(5.5, 10.5);
+
+        System.out.println("Sum (int): " + sumInt);
+        System.out.println("Sum (double): " + sumDouble);
+    }
+}
+```
+2. Method Overriding:
+Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. It is also known as runtime or dynamic polymorphism.
+
+Example:
+```java
+class Shape {
+    // Method to be overridden
+    void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+```
+```java
+class Circle extends Shape {
+    // Overriding the draw method in the subclass
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+```
+In this example, the Circle class extends the Shape class and overrides the draw method. When an object of type Shape is actually an instance of Circle, calling the draw method will execute the overridden method in the Circle class.
+
+```java
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        // Polymorphism - Method Overriding
+        Shape shape = new Circle();
+        shape.draw();
+    }
+}
+```
+The output will be "Drawing a circle" because the draw method of the Circle class is executed, demonstrating that the actual method called is determined at runtime based on the type of the object.
+
+In summary, polymorphism allows for code flexibility by enabling the use of objects of different classes interchangeably, either through method overloading (compile-time polymorphism) or method overriding (runtime polymorphism)
+
+```java
+public class OOPExample {
+    public static void main(String[] args) {
+        // Objects and methods from the Student class
+        Student student = new Student("Charlie", 21);
+        student.displayInfo();
+        System.out.println("--------");
+
+        // Objects and methods from the BankAccount class (Encapsulation)
+        BankAccount account = new BankAccount();
+        account.setBalance(1000);
+        System.out.println("Balance: $" + account.getBalance());
+        System.out.println("--------");
+
+        // Objects and methods from the Dog class (Inheritance)
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+        System.out.println("--------");
+
+        // Objects and methods from the Calculator class (Polymorphism - Method Overloading)
+        Calculator calculator = new Calculator();
+        int sumInt = calculator.add(5, 10);
+        double sumDouble = calculator.add(5.5, 10.5);
+        System.out.println("Sum (int): " + sumInt);
+        System.out.println("Sum (double): " + sumDouble);
+        System.out.println("--------");
+
+        // Objects and methods from the Circle class (Polymorphism - Method Overriding)
+        Shape shape = new Circle();
+        shape.draw();
+    }
+}
+
+```
+### inheritance 
+Inheritance is a fundamental aspect of Object-Oriented Programming (OOP) that allows a new class to inherit properties and behaviors from an existing class. There are different types of inheritance: single inheritance, multiple inheritance, multilevel inheritance, and hierarchical inheritance
+
+```java
+// Base class (Superclass) for single and hierarchical inheritance
+class Animal {
+    // Attribute
+    String species;
+
+    // Constructor
+    public Animal(String species) {
+        this.species = species;
+    }
+
+    // Method
+    void eat() {
+        System.out.println(species + " is eating");
+    }
+}
+
+// First subclass for single inheritance
+class Dog extends Animal {
+    // Additional attribute in the subclass
+    String breed;
+
+    // Constructor in the subclass
+    public Dog(String species, String breed) {
+        // Call the constructor of the superclass (Animal)
+        super(species);
+        this.breed = breed;
+    }
+
+    // Additional method in the subclass
+    void bark() {
+        System.out.println(breed + " is barking");
+    }
+}
+
+// Second subclass for multiple inheritance (using interface)
+interface Swimmer {
+    void swim();
+}
+
+// Third subclass for multiple inheritance (using interface)
+interface Jumper {
+    void jump();
+}
+
+// Combined subclass inheriting from Dog and implementing Swimmer and Jumper
+class Labrador extends Dog implements Swimmer, Jumper {
+    // Constructor in the combined subclass
+    public Labrador(String species, String breed) {
+        // Call the constructor of the immediate superclass (Dog)
+        super(species, breed);
+    }
+
+    // Methods from interfaces
+    @Override
+    public void swim() {
+        System.out.println(breed + " is swimming");
+    }
+
+    @Override
+    public void jump() {
+        System.out.println(breed + " is jumping");
+    }
+}
+
+// Multilevel Inheritance: Poodle is a subclass of Dog
+class Poodle extends Dog {
+    // Additional attribute in the subclass
+    String color;
+
+    // Constructor in the subclass
+    public Poodle(String species, String breed, String color) {
+        // Call the constructor of the immediate superclass (Dog)
+        super(species, breed);
+        this.color = color;
+    }
+
+    // Additional method in the subclass
+    void groom() {
+        System.out.println(breed + " with color " + color + " is being groomed");
+    }
+}
+
+// Main class
+public class AllInheritanceExample {
+    public static void main(String[] args) {
+        // Single Inheritance Example
+        Dog myDog = new Dog("Canine", "Golden Retriever");
+        myDog.eat(); // Inherited method
+        myDog.bark(); // Method from the subclass
+
+        System.out.println("--------");
+
+        // Multiple Inheritance Example
+        Labrador myLabrador = new Labrador("Canine", "Labrador");
+        myLabrador.eat(); // Inherited method from the Animal class
+        myLabrador.bark(); // Inherited method from the Dog class
+        myLabrador.swim(); // Method from the Swimmer interface
+        myLabrador.jump(); // Method from the Jumper interface
+
+        System.out.println("--------");
+
+        // Multilevel Inheritance Example
+        Poodle myPoodle = new Poodle("Canine", "Toy Poodle", "White");
+        myPoodle.eat(); // Inherited method from the Animal class
+        myPoodle.bark(); // Inherited method from the Dog class
+        myPoodle.groom(); // Method from the subclass
+    }
+}
+
+```
+
+- *interface:* In Java, an interface is a collection of abstract methods. Classes can implement multiple interfaces, allowing for multiple inheritance-like behavior.
+
+- *extends*: In Java, the extends keyword is used to indicate that a class is inheriting from another class (single inheritance) or extending an interface.
+
+- *implements*: In Java, the implements keyword is used to indicate that a class is implementing one or more interfaces (multiple inheritance).
+
+- *super*: In Java, the super keyword is used to call the constructor or a method of the immediate superclass.
