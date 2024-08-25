@@ -1,6 +1,6 @@
 {
     "basic": {
-      "syntax": false,
+      "syntax": true,
       "dataTypes": false,
       "variables": false,
       "operators": false,
