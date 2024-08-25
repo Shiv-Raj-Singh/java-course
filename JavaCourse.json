@@ -1,0 +1,104 @@
+{
+    "basic": {
+      "syntax": false,
+      "dataTypes": false,
+      "variables": false,
+      "operators": false,
+      "controlFlow": {
+        "ifElse": false,
+        "switch": false,
+        "loops": {
+          "forLoop": false,
+          "whileLoop": false,
+          "doWhileLoop": false
+        }
+      },
+      "methods": false,
+      "arrays": false,
+      "strings": false
+    },
+    "objectOrientedProgramming": {
+      "classesAndObjects": false,
+      "constructors": false,
+      "inheritance": false,
+      "polymorphism": false,
+      "encapsulation": false,
+      "abstraction": false,
+      "interfaces": false,
+      "overloadingAndOverriding": false,
+      "accessModifiers": false,
+      "staticKeyword": false,
+      "thisKeyword": false,
+      "superKeyword": false
+    },
+    "intermediate": {
+      "packages": false,
+      "exceptionHandling": false,
+      "collectionsFramework": {
+        "list": {
+          "arrayList": false,
+          "linkedList": false,
+          "vector": false,
+          "stack": false
+        },
+        "set": {
+          "hashSet": false,
+          "linkedHashSet": false,
+          "treeSet": false
+        },
+        "queue": {
+          "priorityQueue": false,
+          "deque": false,
+          "arrayDeque": false
+        },
+        "map": {
+          "hashMap": false,
+          "linkedHashMap": false,
+          "treeMap": false,
+          "hashTable": false,
+          "concurrentHashMap": false
+        }
+      },
+      "generics": false,
+      "threads": false,
+      "innerClasses": false,
+      "enum": false,
+      "annotations": false,
+      "serialization": false
+    },
+    "advanced": {
+      "java8Features": {
+        "lambdaExpressions": false,
+        "streamsAPI": false,
+        "optionalClass": false,
+        "functionalInterfaces": false,
+        "methodReferences": false,
+        "defaultAndStaticMethods": false
+      },
+      "concurrency": {
+        "threadPool": false,
+        "synchronization": false,
+        "concurrentCollections": false,
+        "locks": false,
+        "executors": false,
+        "futuresAndCompletableFuture": false
+      },
+      "networking": false,
+      "jdbc": false,
+      "reflectionAPI": false,
+      "jvmInternals": false,
+      "memoryManagement": false,
+      "garbageCollection": false,
+      "designPatterns": false,
+      "jUnitTesting": false,
+      "buildTools": {
+        "maven": false,
+        "gradle": false
+      },
+      "springFramework": false,
+      "microservices": false,
+      "functionalProgramming": false,
+      "dependencyInjection": false
+    }
+  }
+  

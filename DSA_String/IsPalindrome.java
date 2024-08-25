@@ -6,6 +6,7 @@ class IsValidPalindrome {
         if (str.length() <= 1) {
             return true;
         }
+        str = str.toLowerCase();
         int i = 0, j = str.length() - 1;
         while (i < j) {
             if (str.charAt(i) == str.charAt(j)) {
@@ -21,8 +22,8 @@ class IsValidPalindrome {
 
 public class IsPalindrome {
     public static void main(String a[]) {
-        String x = "Mangal";
-        boolean res = IsPalindrome.isValidPalindromeString(x);
+        String x = "Naman";
+        boolean res = IsValidPalindrome.isValidPalindromeString(x);
         System.out.println(res);
 
     }
